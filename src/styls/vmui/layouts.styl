@@ -1,0 +1,251 @@
+/**
+ * 布局页面样式
+ * @author vimo
+ * @date 2018-01-11
+ *
+ * --- function ----
+ *
+ * --- common ----
+ * #layouts 布局
+ * #login   登录
+ * #navbar  导航
+ *
+ * --- component ----
+ */
+
+// #layouts 布局
+.v-wrapper
+    @extend .rel
+    background-color #e3e3e3
+    
+.v-header
+    @extend .rel
+    background-color #fff
+    
+.v-aside
+    @extend .rel
+    background-color #fff
+
+.v-main
+    @extend .rel
+    width 100%
+    .el-scrollbar__wrap
+        overflow-x auto
+
+// #login   登录
+.v-login
+    position relative
+    background-image url('assets/bg.jpg')
+    &-setup
+        position absolute
+        width 428px
+        height 334px
+        top 50%
+        left 50%
+        margin-top -167px
+        margin-left -214px
+        background-color #fff
+        padding 26px 39px 0
+    &-title
+        font-size 26px
+        font-weight 100
+        line-height 1em
+        & > img
+            height 20px
+            float right
+            margin-top 6px
+    &-msg
+        font-size 16px
+        font-weight 100
+        line-height 1em
+        margin-top 10px
+    &-form
+        margin-top 38px
+        .el-input__inner, .el-button--primary
+            border-radius 0
+        .el-button--primary
+            width 100%
+            background-color #005293
+            border-width 0
+            &:hover
+                background-color #0e67ae
+    &-feedback
+        position absolute
+        left 0 
+        right 0
+        bottom 25px
+        font-size 12px
+        text-align center
+        color rgba(255, 255, 255, .5)
+
+// #navbar  导航
+.v-navbar
+    height 100%
+    &-logo
+        float left
+        height 100%
+        line-height 60px
+        & img
+            vertical-align middle
+    &-info
+        float right
+        > li
+            float left
+            line-height 60px
+    &-search
+        position relative
+        padding 0 10px
+        .el-input__inner
+            height 28px!important
+            border-radius 14px
+            border-width 0
+            background-color #205983
+        .el-select__input
+            color #fff
+        .el-button--default
+            position absolute
+            top 0
+            right 20px
+            height 100%
+            padding 0
+            border-width 0
+            background-color transparent
+            color #fff
+            z-index 9
+        .el-input-group__append
+            display block
+            position absolute
+            top 0
+            right 0
+            bottom 0
+            width 28px
+            padding 0
+            text-align center
+            line-height 28px
+            background-color transparent
+            border-width 0
+            color #fff
+            padding-right 12px
+    &-dropdown
+        display none
+        position absolute
+        top 60px
+        right 0
+        border 1px solid #015395
+        background-color #fff
+        z-index 9
+    .el-badge__content.is-fixed
+        top 15px
+        border-width 0
+    &-bell
+        position relative
+        &-dropdown
+            padding 0
+            min-width 310px
+            line-height 26px
+            color #333
+            font-size 12px
+            & li
+                padding 5px 10px 0
+                border-bottom 1px solid #eee
+                &:hover
+                    background-color #eee
+        .el-pager li, .el-pager .more::before
+            line-height 14px!important
+        &:hover &-dropdown
+            display block
+    &-user
+        position relative
+        padding 0 12px
+        vertical-align middle
+        color #fff
+        &-img
+            display inline-block
+            width 37px
+            height 37px
+            vertical-align middle
+            overflow hidden
+        &-msg
+            display inline-block
+            margin-left 8px
+            padding-top 1px
+            vertical-align middle
+            > span
+                display block
+                line-height 18px
+                font-size 12px
+        & > i
+            margin-left 25px
+        &-dropdown
+            padding 10px 13px
+            min-width 210px
+            line-height 26px
+            color #333
+            font-size 12px
+            .el-button
+                padding 0 15px
+                border-radius 0
+                border-width 0
+                line-height 26px
+                font-size 12px
+        &:hover
+            cursor pointer
+            background-color #094981
+        &:hover &-dropdown
+            display block
+    &-btn
+        display block
+        width 40px
+        color #fff
+        text-align center
+        font-size 18px
+        &:hover
+            background-color #094981
+    &-close
+        width 60px
+        text-align center
+        background-color #55b0ff
+        &:hover
+            cursor pointer
+            background-color #79c0fe
+            
+
+/* 主 */
+.z-navbar
+    height 110px
+    &-msg
+        height 60px
+        padding 0 20px
+        ul
+            margin-top 30px
+        li
+            @extend .rel
+            line-height 1em
+            font-size 14px
+            color #333
+            margin 0 10px
+            span
+                cursor pointer
+            &:after
+                content ''
+                @extend .abs
+                top 0
+                bottom 0
+                right -10px
+                border-right 1px solid #ccc
+            &:last-child:after
+                display none
+    &-menu
+        height 50px
+        padding 0 20px
+        background layout_head_bg
+        li
+            line-height 50px
+            a
+                display inline-block
+                height 100%
+                padding 0 20px
+                font-size 16px
+                color #fff
+            &.active, &:hover
+                background #ee1d23

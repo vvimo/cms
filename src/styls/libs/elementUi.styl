@@ -1,0 +1,45 @@
+/* dialog */
+.el-dialog__header
+    border-bottom 1px solid #ebeef5
+.el-dialog__body
+    padding 0
+.el-dialog__wrapper.v-dialog-fullscreen
+    top 10%
+    bottom 10%
+    .el-dialog__body
+        @extend .abs
+        top 54px
+        right 0
+        bottom 0
+        left 0
+        padding 0
+        & > div
+            height 100%
+        &:after
+            content ''
+            @extend .abs
+            top 0
+            right 0
+            left 0
+            border-top 1px solid #eee
+    
+/* scrollbar */
+.el-scrollbar
+    .el-scrollbar__view
+        overflow hidden
+        
+/* form */
+.v-form-read
+    &.el-form
+        .el-form-item
+            margin-bottom 8px
+        .is-disabled
+            &.el-textarea, &.el-input
+                .el-input__inner, .el-textarea__inner
+                    border-color transparent
+                    background-color transparent
+                    cursor auto
+                .el-textarea__inner
+                    resize none
+            .el-input__suffix
+                display none

@@ -1,0 +1,31 @@
+im_btn_height = 30px
+im_btn_lineHeight = im_btn_height
+
+.cl-im
+    @extend .fixed
+    top 110px
+    right 0
+    bottom 0
+    min-width 200px
+    background #fff
+    border 1px solid #e3e3e3
+    z-index 99
+    &.ofn-info
+        width 70%
+    &-ofn
+        @extend .abs
+        padding 10px 5px
+        left -24px
+    &-btn
+        height im_btn_height
+        line-height im_btn_lineHeight
+        border-bottom 1px solid #e3e3e3
+    &-main
+    &-list
+        & a
+            display block
+            height im_btn_height
+            line-height im_btn_lineHeight
+            padding 0 5px
+    &-info
+        @extend .rel
