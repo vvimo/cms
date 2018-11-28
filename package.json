@@ -1,6 +1,6 @@
 {
   "name": "cms",
-  "version": "4.0.2-2",
+  "version": "4.0.2",
   "description": "A Vue.js project",
   "author": "vvimo <lyj397456796@qq.com>",
   "private": true,
@@ -8,9 +8,11 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "release": "standard-version"
   },
   "dependencies": {
+    "standard-version": "^4.4.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
